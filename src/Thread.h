@@ -60,19 +60,14 @@
 #endif
 
 LIBMQTT_API thread_type Thread_start(thread_fn, void*);
-
 LIBMQTT_API mutex_type Thread_create_mutex(int*);
 LIBMQTT_API int Thread_lock_mutex(mutex_type);
 LIBMQTT_API int Thread_unlock_mutex(mutex_type);
-int Thread_destroy_mutex(mutex_type);
-
+LIBMQTT_API int Thread_destroy_mutex(mutex_type);
 LIBMQTT_API thread_id_type Thread_getid();
-
-sem_type Thread_create_sem(int*);
-int Thread_wait_sem(sem_type sem, int timeout);
-int Thread_check_sem(sem_type sem);
-int Thread_post_sem(sem_type sem);
-int Thread_destroy_sem(sem_type sem);
-
-
+LIBMQTT_API sem_type Thread_create_sem(int*);
+LIBMQTT_API int Thread_wait_sem(sem_type sem, int timeout);
+LIBMQTT_API int Thread_check_sem(sem_type sem);
+LIBMQTT_API int Thread_post_sem(sem_type sem);
+LIBMQTT_API int Thread_destroy_sem(sem_type sem);
 #endif
